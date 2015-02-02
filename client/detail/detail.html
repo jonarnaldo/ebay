@@ -1,5 +1,9 @@
-<div>this is the details pane</div>
-<div class="details">{{ vm.currentItem }}</div>
+<div><h1>Details</h1></div>
+<div class="itemLabel">{{ vm.currentItem.label }}</div>
+<div class="itemImage"><img src="{{ vm.currentItem.imageURL }}"></div>
+<div class="itemPrice">$ {{ vm.currentItem.sellingStatus[0].currentPrice[0].__value__ }}</div>
+<div class="itemSeller"></div>
+<div class="itemSellerRating"></div>
 <button ng-click="vm.getCurrentSelection()">get current item</button>
 
 <!--
@@ -20,7 +24,7 @@ storeInfo.storeURL
 sellerInfo.sellerName
 sellerInfo.feedbackScore
 sellerInfo.postivieFeedbackPercent
-sellerInfo.feedbackRaingStar
+sellerInfo.feedbackRatingStar
 sellerInfo.topRatedSeller
 shippingInfo.shippingServiceCost
 shippingInfo.shippingType

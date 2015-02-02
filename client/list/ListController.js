@@ -20,6 +20,7 @@
     // sets current selection on click
     vm.setSelection = function(item) {
       ListFactory.setCurrentSelection(item)
+      $rootScope.$broadcast('update:Selection',item);
     }
 
   }

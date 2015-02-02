@@ -12,20 +12,17 @@
     vm.items;
     vm.currentItem;
 
+    vm.test = 0
+
     ListFactory.getItems(function (data) {
       vm.items = data;
     })
 
-
-    $scope.$watch('vm.currentItem', function() {
-       console.log('hey, myVar has changed!');
-       console.log(ListFactory.getCurrentSelection());
+    $scope.$on('update:Selection', function(event,selection) {
+      console.log('broadcast: ',selection);
+      vm.currentItem = selection;
+      console.log('vm.currentItem: ',vm.currentItem);
     });
-
-    vm.getCurrentSelection = function() {
-      vm.currentItem = ListFactory.getCurrentSelection();
-      console.log(vm.currentItem);
-    }
 
 
   }
