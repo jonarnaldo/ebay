@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <meta charset="utf-8" />
+    <title>Free For All</title>
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.0/simplex/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+  </head>
+  <body ng-app="app">
+    <div ui-view="main"></div>
+
+    <script src="/components/angular/angular.js"></script>
+    <script src="/components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="/components/ngFx/dist/ngFx.js"></script>
+    <script src="/components/jquery/jquery.js"></script>
+    <script src="/components/underscore/underscore.js"></script>
+
+    <script src="app.module.js"></script>
+    <script src="/core/core.module.js"></script>
+    <script src="/core/config.js"></script>
+    <script src="/list/list.module.js"></script>
+    <script src="/list/ListController.js"></script>    
+    <script src="/list/ListFactory.js"></script>      
+    <script src="/detail/detail.module.js"></script>
+    <script src="/detail/DetailController.js"></script>    
+    <script src="/detail/DetailFactory.js"></script>        
+  </body>
+</html>
+
