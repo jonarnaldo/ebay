@@ -1,7 +1,7 @@
-<div>Ebay</div>
-<ul ng-repeat="item in vm.items">
-  <li> 
-    <div>{{ item.label }}</div>
+<ul ng-repeat="item in vm.items" ng-class="{active : vm.isSelected(section)}">
+  <div id="{{ item.itemId[0] }}"></div>
+  <li ng-click="vm.setSelection(item)"> 
+    <div>{{ item.label }} </div>
     <div><img src="{{ item.imageURL }}"></div>
   </li>
 </ul>

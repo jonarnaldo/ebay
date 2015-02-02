@@ -4,7 +4,7 @@
   .module('app.detail')
   .factory('DetailFactory', DetailFactory);
 
-  function DetailFactory($http, $q, $timeout){
+  function DetailFactory($http, $q, $timeout, ListFactory){
     
   }
 })();

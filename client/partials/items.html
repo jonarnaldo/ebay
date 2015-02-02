@@ -1,4 +1,12 @@
 <div id="container">
-  <div ui-view="list"></div> 
-  <div ui-view="detail"></div> 
+
+  <div class="row">
+    <div class="col-lg-4">
+      <div ui-view="list" class="listPanel"></div>       
+    </div>
+    <div class="col-lg-8">
+      <div ui-view="detail" class="detail"></div>       
+    </div>
+  </div>
+
 </div>
