@@ -1,8 +1,13 @@
-<ul ng-repeat="item in vm.items" ng-class="{active : vm.isSelected(section)}">
-  <div id="{{ item.itemId[0] }}"></div>
-  <li ng-click="vm.setSelection(item)"> 
-    <div>{{ item.label }} </div>
-    <div><img src="{{ item.imageURL }}"></div>
-  </li>
-</ul>
+<div class="col-lg-10 list">
+  <div class="navbar">
+  <ul ng-repeat="item in vm.items" class="list-unstyled fx-fade-down listItem">
+    <div id="{{ item.itemId[0] }}"></div>
+    <li ng-click="vm.setSelection(item)"> 
+      <div>{{ item.label }} </div>
+      <div>$ {{ item.sellingStatus[0].currentPrice[0].__value__ }}</div>
+      <div><img src="{{ item.imageURL }}"></div>
+    </li>
+  </ul>
+  </div>
+</div>
 

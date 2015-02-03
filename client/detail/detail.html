@@ -1,39 +1,18 @@
-<div><h1>Details</h1></div>
-<div class="itemLabel">{{ vm.currentItem.label }}</div>
-<div class="itemImage"><img src="{{ vm.currentItem.imageURL }}"></div>
-<div class="itemPrice">$ {{ vm.currentItem.sellingStatus[0].currentPrice[0].__value__ }}</div>
-<div class="itemSeller"></div>
-<div class="itemSellerRating"></div>
-<button ng-click="vm.getCurrentSelection()">get current item</button><test>
+<div class="row animated fadeInDown">
+  <div class="col-lg-12">
+    <div class="itemLabel"><h2>{{ vm.currentItem.label }}</h2></div>          
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <img src="{{ vm.currentItem.pictureURLLarge[0] }}">
+  </div>
+  <div class="col-lg-6 animated fadeInDown">
+    <div class="itemCondition">Item Condition: {{ vm.currentItem.condition[0].conditionDisplayName[0] }}</div>
+    <div class="itemPrice">$ {{ vm.currentItem.sellingStatus[0].currentPrice[0].__value__ }}</div>
+    <div class="sellerInfo"> seller: {{ vm.currentItem.sellerInfo[0].sellerUserName[0] }}
+        ({{ vm.currentItem.sellerInfo[0].feedbackScore[0] }})
+    </div>
+  </div>
+</div>
 
-<!--
-label
-imageURL
-itemId
-title
-globalId
-primaryCategory
-galleryURL
-paymentMethod
-autoPay
-postalCode
-location
-country
-storeInfo.storeName
-storeInfo.storeURL
-sellerInfo.sellerName
-sellerInfo.feedbackScore
-sellerInfo.postivieFeedbackPercent
-sellerInfo.feedbackRatingStar
-sellerInfo.topRatedSeller
-shippingInfo.shippingServiceCost
-shippingInfo.shippingType
-shippingInfo.shipToLocations
-shippingInfo.expeditedShipping
-shippingInfo.ondeDayShippingAvailable
-shippingInfo.handlingTime
-sellingStatus.currentPrice[0].@currencyId
-sellingStatus.currentPrice[0].__value__
-
-
--->

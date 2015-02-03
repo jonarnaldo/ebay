@@ -21,18 +21,28 @@ angular
     .state('items.subs',{
       url: '',
       views: {
+        'detail@items': {
+          templateUrl: '/detail/detail.html',
+          controller: 'DetailController as vm'
+        },
+        'listScroll@items': {
+          templateUrl: '/list/listScroll.html',
+          controller: 'ListController as vm'
+        },
         'list@items': {
           templateUrl: '/list/list.html',
           controller: 'ListController as vm'
-        },
-        'detail@items': {
-          templateUrl: '/detail/detail.html',
-          controller: 'DetailController as vm',
         }
       }
     })
+    .state('list', {
+      url: '/list',
+      templateUrl: '/list/list.html',
+      controller: 'ListController as vm'
+    })
 
-    $locationProvider.html5Mode(true)
+    $urlRouterProvider.otherwise('/');
+    // $locationProvider.html5Mode(true)
   }
 
 }).call(this);

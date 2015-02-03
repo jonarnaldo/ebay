@@ -10,20 +10,26 @@
   function DetailController(ListFactory, $scope, $rootScope, $stateParams, $q, $timeout, $http){
     var vm = this;
     vm.items;
-    vm.currentItem;
+    vm.currentItem = null;
 
-    vm.test = 0
+    $scope.$watch(function () {
+      return ListFactory.item.details;
+    }, function(oldVal,newVal) {
+      if (typeof newVal !== 'undefined') {
+          vm.currentItem = ListFactory.item.details;
+      }
+    }) 
 
-    ListFactory.getItems(function (data) {
-      vm.items = data;
-    })
+    // initialize with first item
+    vm.init = function() {
+      console.log('initializing...')
+      ListFactory.getItems(function (data) {
+        console.log('loading...');
+        vm.currentItem = data[0];
+      })
+    }
 
-    $scope.$on('update:Selection', function(event,selection) {
-      console.log('broadcast: ',selection);
-      vm.currentItem = selection;
-      console.log('vm.currentItem: ',vm.currentItem);
-    });
-
+    vm.init();
 
   }
 })();

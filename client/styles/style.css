@@ -5,3 +5,24 @@ body, html{
   background-color: rgb(245,245,245);
 }
 
+
+
+.list {
+
+  background-color: #cccccc;
+
+}
+
+.listItem {
+  padding: 10px;
+  border-style: solid;
+  border-right: 0;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 1px dotted white;
+}
+
+.navbar {
+  overflow: scroll;
+  height: 900px;
+}
