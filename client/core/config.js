@@ -25,10 +25,6 @@ angular
           templateUrl: '/detail/detail.html',
           controller: 'DetailController as vm'
         },
-        'listScroll@items': {
-          templateUrl: '/list/listScroll.html',
-          controller: 'ListController as vm'
-        },
         'list@items': {
           templateUrl: '/list/list.html',
           controller: 'ListController as vm'
@@ -42,7 +38,7 @@ angular
     })
 
     $urlRouterProvider.otherwise('/');
-    // $locationProvider.html5Mode(true)
+    $locationProvider.html5Mode(true)
   }
 
 }).call(this);

@@ -34,7 +34,7 @@
 
     function getItems(cb) {
       console.log('getting places...');
-      $http.get('https://s3-us-west-2.amazonaws.com/famous-hiring/famousEbayData.json').success(function(data, status, headers, config) {
+      $http.get('/items').success(function(data, status, headers, config) {
         cb(data);
       }).error(function (data, status, headers, config) {
         console.log('Error! ', status);
