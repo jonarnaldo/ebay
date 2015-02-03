@@ -42,3 +42,7 @@ td:hover {
 td.item > div {
   height: 80px;
 }
+
+input {
+  width: 100%;
+}
