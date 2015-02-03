@@ -5,8 +5,6 @@ body, html{
   background-color: rgb(245,245,245);
 }
 
-
-
 .list {
 
   background-color: #cccccc;
@@ -25,4 +23,22 @@ body, html{
 .navbar {
   overflow: scroll;
   height: 900px;
+}
+
+.detailImage {
+  border-right: 1px dotted black;
+}
+
+td {
+  height: 20px;
+  padding: 10px;
+}
+
+td:hover {
+  background-color: #3399FF;
+  color: white;
+}
+
+td.item > div {
+  height: 80px;
 }

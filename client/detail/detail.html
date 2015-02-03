@@ -4,14 +4,30 @@
   </div>
 </div>
 <div class="row">
-  <div class="col-lg-6">
+  <div class="col-lg-6 detailImage">
     <img src="{{ vm.currentItem.pictureURLLarge[0] }}">
   </div>
   <div class="col-lg-6 animated fadeInDown">
-    <div class="itemCondition">Item Condition: {{ vm.currentItem.condition[0].conditionDisplayName[0] }}</div>
-    <div class="itemPrice">$ {{ vm.currentItem.sellingStatus[0].currentPrice[0].__value__ }}</div>
+    <div class="itemCondition">Item Condition: <b>{{ vm.currentItem.condition[0].conditionDisplayName[0] || 'N/A' }}</b></div>
+    <div class="itemPrice">Starting Bid: ${{ vm.currentItem.sellingStatus[0].currentPrice[0].__value__ }}</div>
     <div class="sellerInfo"> seller: {{ vm.currentItem.sellerInfo[0].sellerUserName[0] }}
         ({{ vm.currentItem.sellerInfo[0].feedbackScore[0] }})
+        {{ vm.currentItem.sellerInfo[0].positiveFeedbackPercent[0] }}%
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="shippingInfo">
+      <h4>Shipping Costs Info</h4>
+      <ul class="list-unstyled">
+        <li> Cost: ${{ vm.currentItem.shippingInfo[0].shippingServiceCost[0].__value__ }} </li>
+        <li> Shipping Type: {{ vm.currentItem.shippingInfo[0].shippingType[0] }} </li>
+        <li> Locations: {{ vm.currentItem.shippingInfo[0].shipToLocations[0] }} </li>
+        <li> Expedited Shipping: {{ vm.currentItem.shippingInfo[0].expeditedShipping[0] }} </li>
+        <li> One Day Shipping: {{ vm.currentItem.shippingInfo[0].oneDayShippingAvailable[0] }} </li>
+        <li> Handling Time: {{  vm.currentItem.shippingInfo[0].handlingTime[0] }} </li>
+      </ul>
     </div>
   </div>
 </div>

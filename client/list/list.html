@@ -1,13 +1,24 @@
 <div class="col-lg-10 list">
-  <div class="navbar">
-  <ul ng-repeat="item in vm.items" class="list-unstyled fx-fade-down listItem">
-    <div id="{{ item.itemId[0] }}"></div>
-    <li ng-click="vm.setSelection(item)"> 
-      <div>{{ item.label }} </div>
-      <div>$ {{ item.sellingStatus[0].currentPrice[0].__value__ }}</div>
-      <div><img src="{{ item.imageURL }}"></div>
-    </li>
-  </ul>
+  <div class="navbar">  
+  <table class="table table-striped">
+    <tr ng-repeat="item in vm.items" class="list-unstyled fx-fade-down listItem">
+      <td ng-click="vm.setSelection(item)" class="item">
+        <div class="row">
+          <div class="col-xs-10 col-lg-6">
+            <img src="{{ item.imageURL }}" width="70%">
+          </div>
+          <div class="col-xs-2 col-lg-6 vert-align">
+            <div>$ {{ item.sellingStatus[0].currentPrice[0].__value__ }}</div>
+          </div>
+        </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div>{{ item.label }}</div>          
+        </div>
+      </div>
+      </td>
+    </tr>
+  </table>
   </div>
 </div>
 

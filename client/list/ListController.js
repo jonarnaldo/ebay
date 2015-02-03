@@ -19,7 +19,7 @@
       angular.forEach(data, function(item, index) {
         $timeout(function() {
           vm.items.push(item)
-        }, index * 60);
+        }, index * 150);
       })
     })
     // sets current selection on click
